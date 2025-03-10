@@ -168,9 +168,9 @@ li::marker {
     }
 
     p,
-li {
+    li {
     font-size: 16px;
-}
+    }
 
     hr {
         width: 95%;
@@ -181,7 +181,7 @@ li {
     .container {
         width: 100%;
         max-width: 720px;
-        margin: 70px auto;
+        margin: 100px auto;
         background: white;
         border-radius: 15px;
         padding: 25px;
