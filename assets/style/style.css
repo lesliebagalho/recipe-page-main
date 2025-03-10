@@ -49,8 +49,8 @@ h2 {
     color: var(--brown800);
 }
 
-h3 {
-    font-size: 28px;
+.prep-h2 {
+    font-size: 20px;
     font-family: var(--font-outfit);
     font-weight: 600;
     color: var(--rose800);
@@ -68,7 +68,7 @@ li {
 hr {
     width: 85%;
     text-align: center;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 li::marker {
@@ -88,7 +88,7 @@ li::marker {
 
 /* Section title */
 .container .title {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .container h1 {
@@ -102,7 +102,7 @@ li::marker {
 /* Section Preparation */
 .container .preparation {
     padding-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .container .preparation ul {
@@ -110,13 +110,13 @@ li::marker {
 }
 
 .container .preparation ul li {
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
 /* Section Ingredients */
 .container .ingredients ul {
     margin-bottom: 25px;
-    line-height: 2.5rem;
+    line-height: 2rem;
     padding-left: 55px;
 }
 
@@ -127,34 +127,29 @@ li::marker {
 
 .container .instructions .list li {
     padding-bottom: 1rem;
-    line-height: 1.5rem;
+    line-height: 1rem;
 }
 
 /* Section Nutrition */
 .container .nutrition{
-    margin-bottom: 25px;
     padding-bottom: 10px;
 }
-.container .nutrition .table {
+.container .nutrition-card {
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px 0;
+}
+
+.container .nutrition-card .table-line {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding-left: 30px;
-    margin: 35px 0 25px 0;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
 }
 
-.container .nutrition .table .table-line {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.container .nutrition .table p {
-    padding-left: 25px;
-}
-
-.container .nutrition .table hr {
-    margin: 10px 0;
+.container .nutrition-card .table-line strong {
+    color: var(--rose800);
+    font-weight: bold;
 }
 
 /* Desktop */
@@ -162,8 +157,8 @@ li::marker {
     h2 {
         font-size: 28px;
     }
-    
-    h3 {
+
+    .prep-h2{
         font-size: 22px;
     }
 
@@ -200,8 +195,8 @@ li::marker {
     .container .nutrition-card {
         width: 100%;
         margin: auto;
-        margin-top: 35px;
-        padding: 20px 0;
+        margin-top: 15px;
+        padding: 15px 0;
     }
 
     .container .nutrition-card .table-line{
