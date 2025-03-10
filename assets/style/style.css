@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F3E5D8;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+h2 {
+    padding-bottom: 2rem;
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+hr {
+    margin: 25px 0;
+}
+
+.content {
+    width: 100%;
+    max-width: 375px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.content img {
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.content .title {
+    margin-bottom: 50px;
+}
+
+.content .preparation {
+    padding-left: 25px;
+    margin-bottom: 50px;
+    line-height: 2rem;
+}
+
+.content .preparation li {
+    line-height: 2rem;
+}
+
+.content .ingredients {
+    margin-bottom: 25px;
+    line-height: 2rem;
+}
+
+.content .instructions .list {
+    padding-left: 10px;
+}
+
+.content .instructions .list li {
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+.content .nutrition .table {
+    margin-top: 15px;
+}
+
+.content .nutrition .table .table-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .nutrition .table p {
+    padding-left: 20px;
+}
+
+.content .nutrition .table strong {
+    padding-right: 70px;
+}
+
+.content .nutrition .table hr {
+    margin: 10px 0;
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+    .content {
+        max-width: 750px;
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
