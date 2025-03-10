@@ -1,3 +1,30 @@
+@charset "UTF-8";
+
+@import 'global.css';
+
+/* - Family: [Young Serif](https://fonts.google.com/specimen/Young+Serif)
+- Weights: 400 */
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&display=swap');
+
+/* - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 600, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone100: hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+    --stone600: hsl(30, 10%, 34%);
+    --stone900: hsl(24, 5%, 18%);
+    --brown800: hsl(14, 45%, 36%);
+    --rose800: hsl(332, 51%, 32%);
+    --rose50: hsl(330, 100%, 98%);
+
+    --font-young: 'Young Serif';
+    --font-outfit: 'Outfit';
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,108 +32,198 @@
 }
 
 body {
-    background: #F3E5D8;
-    font-family: Arial, sans-serif;
+    background: var(--stone100);
+    font-size: 16px;
 }
 
-h1 {
-    margin-bottom: 25px;
-    font-size: 1.5rem;
+/* Global */
+a{
+    text-decoration: none;
 }
 
 h2 {
-    padding-bottom: 2rem;
-    font-size: 1.25rem;
+    font-size: 38px;
+    font-family: var(--font-young);
+    font-weight: 400;
+    padding: 0 0 25px 25px;
+    color: var(--brown800);
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 28px;
+    font-family: var(--font-outfit);
+    font-weight: 600;
+    color: var(--rose800);
+}
+
+p,
+li {
+    font-family: var(--font-outfit);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--stone600);
+    padding: 0 25px;
 }
 
 hr {
-    margin: 25px 0;
+    width: 85%;
+    text-align: center;
+    margin: 40px auto;
 }
 
-.content {
-    width: 100%;
-    max-width: 375px;
-    margin: 50px auto;
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
+li::marker {
+    color: var(--rose800);
 }
 
-.content img {
+.container {
+    width: 375px;
+    margin: auto;
+    background: var(--white);
+}
+
+.container img {
     width: 100%;
     margin-bottom: 25px;
-    border-radius: 12px;
 }
 
-.content .title {
+/* Section title */
+.container .title {
     margin-bottom: 50px;
 }
 
-.content .preparation {
-    padding-left: 25px;
-    margin-bottom: 50px;
-    line-height: 2rem;
-}
-
-.content .preparation li {
-    line-height: 2rem;
-}
-
-.content .ingredients {
+.container h1 {
     margin-bottom: 25px;
-    line-height: 2rem;
+    font-family: var(--font-young);
+    font-weight: 400;
+    font-size: 38px;
+    padding: 0 25px;
 }
 
-.content .instructions .list {
-    padding-left: 10px;
+/* Section Preparation */
+.container .preparation {
+    padding-left: 50px;
+    margin-bottom: 50px;
 }
 
-.content .instructions .list li {
+.container .preparation ul {
+    padding-left: 30px;
+}
+
+.container .preparation ul li {
+    line-height: 2.5rem;
+}
+
+/* Section Ingredients */
+.container .ingredients ul {
+    margin-bottom: 25px;
+    line-height: 2.5rem;
+    padding-left: 55px;
+}
+
+/* Section Instructions */
+.container .instructions .list {
+    padding-left: 55px;
+}
+
+.container .instructions .list li {
     padding-bottom: 1rem;
     line-height: 1.5rem;
 }
 
-.content .nutrition .table {
-    margin-top: 15px;
+/* Section Nutrition */
+.container .nutrition{
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+.container .nutrition .table {
+    padding-left: 30px;
+    margin: 35px 0 25px 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
-.content .nutrition .table .table-line {
+.container .nutrition .table .table-line {
     display: flex;
     justify-content: space-between;
+    padding: 10px 0;
 }
 
-.content .nutrition .table p {
-    padding-left: 20px;
+.container .nutrition .table p {
+    padding-left: 25px;
 }
 
-.content .nutrition .table strong {
-    padding-right: 70px;
-}
-
-.content .nutrition .table hr {
+.container .nutrition .table hr {
     margin: 10px 0;
 }
 
 /* Desktop */
-@media (min-width: 1440px) {
-    .content {
-        max-width: 750px;
-        padding: 50px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
+@media screen and (min-width: 1440px) {
     h2 {
-        font-size: 1.5rem;
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 22px;
     }
 
-    h3 {
-        font-size: 1.25rem;
+    p,
+li {
+    font-size: 16px;
+}
+
+    hr {
+        width: 95%;
+        text-align: center;
+        margin: 20px auto;
     }
+
+    .container {
+        width: 100%;
+        max-width: 720px;
+        margin: 70px auto;
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+    }
+
+    .container img {
+        width: 100%;
+        margin-bottom: 25px;
+        border-radius: 12px;
+    }
+
+    /* Section Nutrition */
+    .container .nutrition{
+        padding-bottom: 10px;
+    }
+    .container .nutrition-card {
+        width: 100%;
+        margin: auto;
+        margin-top: 35px;
+        padding: 20px 0;
+    }
+
+    .container .nutrition-card .table-line{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 30px;
+    }
+
+    .container .nutrition-card .table-line strong{
+        color: var(--rose800);
+        font-weight: bold;
+    }
+}
+
+
+/* Footer */
+.attribution {
+    margin: 25px 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--brown800);
 }
